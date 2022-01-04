@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/create-event.css" rel="stylesheet" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <img src="/img/profile.png" class="logo"/>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/dashboard">Profile</a></li>
+          <li><a class="nav-link" href="/events">Events</a></li>
+          <li><a class="nav-link" href="/search">Search</a></li>
+          <li><a class="nav-link active-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+    <div class="event">
+      <div class="card">
+        <h2>Event Name</h2>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/new-dashboard-style.css" rel="stylesheet" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <img src="/img/profile.png" class="logo"/>
+        <!-- <input type="text" placeholder="Search..." class="search-bar" /> -->
+        <ul class="nav-list">
+          <li><a class="nav-link active-link" href="/dashboard">Profile</a></li>
+          <li><a class="nav-link" href="/events">Events</a></li>
+          <li><a class="nav-link" href="/search">Search</a></li>
+          <li><a class="nav-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+    <article class="info">
+      <div class="card">
+        <h2>Profile Information</h2>
+      </div>
+      <div class="card2">
+        <img src="/img/profile-transparent.png" class="profile"/>
+      </div>
+    </article>
+  </body>
+</html>

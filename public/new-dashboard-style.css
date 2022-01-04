@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lato";
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow: scroll;
+}
+
+body {
+  background: rgb(241, 241, 241);
+  display: flex;
+}
+
+/******************************/
+/* NAVIGATION */
+/******************************/
+
+.logo {
+  margin-left: 87px;
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  background: #4739d7;
+  height: 100vh;
+  width: 250px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.nav-list {
+  color: #fff;
+}
+
+
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  padding: 25px 0;
+  padding-left: 35px;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.2s;
+  background: #4739d7;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.active-link:link,
+.active-link:visited {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.nav-dashboard-btn {
+  border-radius: 11px;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #fff;
+  color: #4739d7;
+  padding: 5px 10px 7px 10px;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 20px;
+  left: 93px;
+}
+
+.nav-dashboard-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: #4739d7;
+  color: #fff;
+}
+
+.dashboard {
+  flex: 1;
+}
+
+.info {
+  flex: 3.5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #fff;
+  border-radius: 1rem;
+  margin: 4rem 1rem;
+  margin-right: 25rem;
+  padding: 2rem;
+  padding-bottom: 40rem;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 3rem;
+  background: #fff;
+  border-radius: 1rem;
+  margin: 1rem 2rem;
+  margin-left: 48.5rem;
+  padding: 2rem;
+  padding-right: 3rem;
+  padding-bottom: 32.5rem;
+}
+
+.profile {
+  height: 200px;
+  width: 200px;
+  margin-top: -50px;
+  margin-left: 15px;
+}

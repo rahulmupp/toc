@@ -10,7 +10,6 @@
     <header class="dashboard">
       <nav class="sidebar">
         <img src="/img/profile.png" class="logo"/>
-        <!-- <input type="text" placeholder="Search..." class="search-bar" /> -->
         <ul class="nav-list">
           <li><a class="nav-link active-link" href="/dashboard">Profile</a></li>
           <li><a class="nav-link" href="/events">Events</a></li>
@@ -23,11 +22,57 @@
       </nav>
     </header>
     <article class="info">
+      <h2 class="heading">Profile</h2>
       <div class="card">
-        <h2>Profile Information</h2>
+        <h2 class="card-heading">Profile Information</h2>
+        <form method="POST">
+          <button class="save">Save</button>
+        </form>
+        <h3 class="section-heading">GENERAL</h3>
+        <div class="pf-info">
+          <div class="first-col" />
+            <p>First Name</p>
+            <input type="text" placeholder="Type here" />
+            <p>Username</p>
+            <input type="text" placeholder="Type here" />
+            <h3 class="section-heading">CONTACT</h3>
+            <p class="phone">Mobile/Phone</p>
+            <input type="text" placeholder="Type here" />
+            <p>Address</p>
+            <input type="text" placeholder="Type here" />
+          </div>
+
+          <div class="second-col" />
+            <p>Middle Name</p>
+            <input type="text" placeholder="Type here" />
+            <p>Password</p>
+            <input type="text" placeholder="Type here" />
+            <h3 class="section-heading">ㅤ</h3>
+            <p>Whatsapp</p>
+            <input type="text" placeholder="Type here" />
+            <p>City</p>
+            <input type="text" placeholder="Type here" />
+          </div>
+
+          <div class="third-col" />
+            <p>Last Name</p>
+            <input type="text" placeholder="Type here" />
+            <p>Re-Type Password</p>
+            <input type="text" placeholder="Type here" />
+            <h3 class="section-heading">ㅤ</h3>
+            <p>Email</p>
+            <input type="text" placeholder="Type here" value="<%=email%>"/>
+            <p>Country</p>
+            <input type="text" placeholder="Type here" />
+          </div>
+        </div>
       </div>
+
       <div class="card2">
-        <img src="/img/profile-transparent.png" class="profile"/>
+        <img src="/img/profile.png" class="profile" />
+        <h2>First Last</h2>
+        <h3>Member since 2021</h3>
+        <h4>Events Hosted: 88</h4>
       </div>
     </article>
   </body>

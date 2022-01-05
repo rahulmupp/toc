@@ -102,10 +102,84 @@ html {
 }
 
 h2 {
-  position: relative;
-  top: -19rem;
+  position: absolute;
+  top: 5rem;
   color: #000;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: #4739d7;
+}
+
+.desc-heading {
+  position: absolute;
+  top: 13rem;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4739d7;
+}
+
+.info {
+  color: #878c92;
+  font-size: 20px;
+  position: absolute;
+  left: 23.6rem;
+  line-height: 23px;
+}
+
+#eventDate {
+  position: absolute;
+  top: 7.6rem;
+}
+
+#eventTime {
+  position: absolute;
+  top: 9rem;
+}
+
+#eventAddress {
+  position: absolute;
+  top: 10.4rem;
+}
+
+.desc-text {
+  color: #878c92;
+  font-size: 20px;
+  position: absolute;
+  top: 15rem;
+  left: 23.6rem;
+  max-width: 400px;
+  line-height: 23px;
+}
+
+.venue {
+  position: absolute;
+  top:33rem;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4739d7;
+}
+
+.location {
+  position: absolute;
+  top: 35rem;
+  left: 23.6rem;
+  max-width: 400px;
+}
+
+.contact-heading {
+  position: absolute;
+  top:25rem;
+  left: 22.5rem;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4739d7;
+}
+
+.contact-info {
+  position: absolute;
+  top: 27rem;
+  left: 23.6rem;
+  color: #878c92;
+  font-size: 20px;
 }

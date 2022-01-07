@@ -21,6 +21,10 @@ let sessionOptions = session({
 
 // Use session options
 app.use(sessionOptions);
+app.use(function (req, res, next) {
+  res.locals.user = req.session.user;
+  next();
+});
 
 // Accessing router
 const router = require("./router");

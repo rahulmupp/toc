@@ -147,3 +147,13 @@ input:active {
   width: 400px;
   height: 100px;
 }
+
+.submit-btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #4739d7;
+  color: #fff;
+  padding: 5px 10px 7px 10px;
+  transition: all 0.2s;
+}

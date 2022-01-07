@@ -33,14 +33,14 @@
         <div class="pf-info">
           <div class="first-col" />
             <p>First Name</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.firstName%>"/>
             <p>Username</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.username%>"/>
             <h3 class="section-heading">CONTACT</h3>
             <p class="phone">Mobile/Phone</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.phone%>"/>
             <p>Address</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.address%>"/>
           </div>
 
           <div class="second-col" />
@@ -48,7 +48,7 @@
             <input type="text" placeholder="Type here" />
             <div class="password-wrapper"> 
               <p>Password</p> 
-              <input type="password" placeholder="Type here" id="pswrd_1" />
+              <input type="password" placeholder="Type here" id="pswrd_1" value="<%=user.password%>"/>
               <span class="eye2" onclick="toggle()"> 
                 <i id="appear1" class="fa fa-eye"></i>
                 <i id="appear2" class="fa fa-eye-slash"></i> 
@@ -74,36 +74,20 @@
                 }
               }
             </script>
-
-            <!-- <script>
-              let state = false;
-              function togglePassword() {
-                if(state) {
-                  document.getElementsByClassName("password").setAttribute("type", "password");
-                  document.getElementsById("eye").style.color='#7a797e';
-                  state = false;
-                }
-                else {
-                  document.getElementsByClassName("password").setAttribute("type", "text");
-                  document.getElementsById("eye").style.color='#4739d7';
-                  state = true;
-                }
-              }
-            </script> -->
             <h3 class="section-heading">ㅤ</h3>
             <p>Whatsapp</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.whatsApp%>"/>
             <p>City</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.city%>"/>
           </div>
 
           <div class="third-col" />
             <p>Last Name</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.lastName%>"/>
             <div class="password-wrapper-2">
               <div class="error-text">Error! Passwords do not match!</div>
               <p>Confirm Password</p>
-              <input type="password" placeholder="Type here" id="pswrd_2" />
+              <input type="password" placeholder="Type here" id="pswrd_2" value="<%=user.password%>"/>
               <span class="eye" onclick="myFunction()"> 
                 <i id="hide1" class="fa fa-eye"></i>
                 <i id="hide2" class="fa fa-eye-slash"></i> 
@@ -132,9 +116,9 @@
 
             <h3 class="section-heading">ㅤ</h3>
             <p>Email</p>
-            <input type="text" placeholder="Type here" value="<%=email%>"/>
+            <input type="text" placeholder="Type here" value="<%=user.email%>"/>
             <p>Country</p>
-            <input type="text" placeholder="Type here" />
+            <input type="text" placeholder="Type here" value="<%=user.country%>"/>
           </div>
         </div>
       </div>

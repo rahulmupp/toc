@@ -13,9 +13,16 @@ let User = function (data) {
 // Getting rid of extra spaces and capitalization issues in name and email
 User.prototype.cleanUp = function () {
   this.data = {
-    name: this.data.name,
+    phone: this.data.phone,
     email: this.data.email.trim().toLowerCase(),
     password: this.data.password,
+    firstName: this.data.firstName,
+    lastName: this.data.lastName,
+    username: this.data.username,
+    whatsApp: this.data.whatsApp,
+    address: this.data.address,
+    city: this.data.city,
+    country: this.data.country,
   };
 };
 
@@ -35,7 +42,7 @@ User.prototype.validate = function () {
   }
 
   // Setting minimum length
-  if (this.data.name.length < 3) {
+  if (this.data.firstName.length < 3) {
     this.errors.push("Name must be at least 3 characters");
   }
 

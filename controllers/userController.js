@@ -6,7 +6,7 @@ const User = require("../models/User");
 exports.register = function (req, res) {
   let user = new User(req.body);
   user.register();
-  req.session.user = { name: user.data.name, email: user.data.email };
+  req.session.user = { firstName: user.data.firstName, email: user.data.email, phone: user.data.phone, lastName: user.data.lastName, username: user.data.username, password: user.data.password, whatsApp: user.data.whatsApp, address: user.data.address, city: user.data.city, country: user.data.country};
   req.session.save(function () {
     res.redirect("/dashboard");
   });
@@ -28,6 +28,18 @@ exports.login = function (req, res) {
     });
 };
 
+// Check if user is logged in
+exports.isLoggedIn = function (req, res, next) {
+  if (req.session.user) {
+    next();
+  } else {
+    // res.send("must be logged in");
+    req.session.save(function () {
+      res.redirect("/login");
+    });
+  }
+};
+
 // Handling user logout
 exports.logout = function (req, res) {
   req.session.destroy(function () {
@@ -43,10 +55,7 @@ exports.home = function (req, res) {
 // Render dashboard
 exports.dashboard = function (req, res) {
   if (req.session.user) {
-    res.render("dashboard", {
-      name: req.session.user.name,
-      email: req.session.user.email,
-    });
+    res.render("dashboard");
   } else {
     res.redirect("/login");
   }

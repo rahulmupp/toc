@@ -1,8 +1,8 @@
 // Import Bcrypt for password hashing
-const bcrypt = require('bcryptjs');
+const bcrypt = require("bcryptjs");
 
 // Access users collection in database
-const usersCollection = require('../db').db().collection("users");
+const usersCollection = require("../db").db().collection("users");
 
 // User Object
 let User = function (data) {
@@ -58,30 +58,36 @@ User.prototype.register = function () {
     // Hash User's password
     let salt = bcrypt.genSaltSync(10);
     this.data.password = bcrypt.hashSync(this.data.password, salt);
-    currentUser = this.data
+    currentUser = this.data;
     // Insert user into database
     usersCollection.insertOne(this.data);
   }
 };
 
 // Login existing user
-User.prototype.login = function() {
+User.prototype.login = function () {
   return new Promise((resolve, reject) => {
-      // Call cleanup method which was called upon signup to make sure the values match
-      this.cleanUp();
+    // Call cleanup method which was called upon signup to make sure the values match
+    this.cleanUp();
 
-      // Search for existing user in database
-      usersCollection.findOne({email: this.data.email}).then((currentUser) => {
+    // Search for existing user in database
+    usersCollection
+      .findOne({ email: this.data.email })
+      .then((currentUser) => {
         // Compare inputted password with stored, hashed password
-        if (currentUser && bcrypt.compareSync(this.data.password, currentUser.password)) {
+        if (
+          currentUser &&
+          bcrypt.compareSync(this.data.password, currentUser.password)
+        ) {
           resolve("Succesfully logged in!");
         } else {
           reject("Error with login.");
         }
-      }).catch(function() {
+      })
+      .catch(function () {
         reject("Error with application, please try again later.");
       });
-});
-}
+  });
+};
 
 module.exports = User;

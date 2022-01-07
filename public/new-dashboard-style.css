@@ -9,11 +9,11 @@
 }
 
 html {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 body {
-  background: rgb(241, 241, 241);
+  background: #f1f1f1;
   display: flex;
 }
 
@@ -41,7 +41,6 @@ body {
 .nav-list {
   color: #fff;
 }
-
 
 .nav-link:link,
 .nav-link:visited {
@@ -106,7 +105,6 @@ body {
 }
 
 .card {
-  justify-content: space-evenly;
   background: #fff;
   border-radius: 1rem;
   margin: 1rem 1rem;
@@ -141,7 +139,7 @@ body {
   margin-top: 2.2rem;
 }
 
-input[type=text] {
+input {
   margin: 1.7rem 0rem;
   box-sizing: border-box;
   border: none;
@@ -155,6 +153,40 @@ input:active {
   outline: none;
   border-bottom: 2px solid #4739d7;
   transition: 0.3s;
+}
+
+.error-text {
+  background: #f8d7da;
+  padding: 8px 4px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  color: #8b3e46;
+  border: 1px solid #f5c6cb;
+  display: none;
+}
+
+.eye {
+  position: absolute;
+  top: 24.2rem;
+  left: 58rem;
+  cursor: pointer;
+  color: #7a797e;
+}
+
+.eye2 {
+  position: absolute;
+  top: 24.2rem;
+  left: 45rem;
+  cursor: pointer;
+  color: #7a797e;
+}
+
+#hide1 {
+  display: none;
+}
+
+#appear1 {
+  display: none;
 }
 
 .save {
@@ -181,6 +213,7 @@ input:active {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   position: absolute;
   top: 3rem;
   background: #fff;
@@ -194,8 +227,17 @@ input:active {
 .profile {
   height: 150px;
   width: 150px;
-  margin-top: -20px;
+  margin-top: 9rem;
   margin-left: 15px;
   border-radius: 50%;
-  border: 2px solid #4739d7;
+  border: 10px solid #4739d7;
+}
+
+.name {
+  margin-top: 1rem;
+}
+
+.since {
+  color: grey;
+  margin-bottom: 4rem;
 }

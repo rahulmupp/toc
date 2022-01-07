@@ -5,11 +5,10 @@
     <link href="/create-event.css" rel="stylesheet" />
     <title>Dashboard</title>
   </head>
-
   <body>
     <header class="dashboard">
       <nav class="sidebar">
-        <img src="/img/profile.png" class="logo"/>
+        <img src="/img/profile.png" class="logo" />
         <ul class="nav-list">
           <li><a class="nav-link" href="/dashboard">Profile</a></li>
           <li><a class="nav-link" href="/events">Events</a></li>
@@ -21,49 +20,48 @@
         </form>
       </nav>
     </header>
-    <div class="event">
+    <article class="info">
+      <h2 class="heading">Create Event</h2>
       <div class="card">
-        <h2>Event Name</h2>
-        <ul class="event-info">
-          <li class="info" id="eventDate">Date</li>
-          <li class="info" id="eventTime">Time</li>
-          <li class="info" id="eventAddress">Address</li>
-        </ul>
-        <h3 class="desc-heading">Event description</h3>
-        <div class="desc-text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <h3 class="venue">Venue</h3>
-        <p class="location">
-          The host of this event reserved the <strong>Theater</strong>. <br>Reserve your seats on the right.
-        </p>
-      <div class="contact">
-        <h3 class="contact-heading">Contact Host</h3>
-          <ul class="contact-info">
-            <li>Host Name</li>
-            <li>Phone number</li>
-            <li>email@address.com</li>
-          </ul>
+        <form class="event">
+          <h1 class="card-heading">Setup Event</h1>
+          <div class="container">
+            <div class="basics">
+              <h3 class="basic-info">Basic Info</h3>
+              <p class="form-field-name">Organizer Name</p>
+              <input type="text" class="form-input" id="Name" />
+              <br />
+              <p class="form-field-name">Organizer E-mail</p>
+              <input type="text" class="form-input" id="email" />
+              <p class="form-field-name">Organizer Phone Number</p>
+              <input type="text" class="form-input" id="phone" />
+              <p class="form-field-name">Venue Address</p>
+              <input type="text" class="form-input" id="address" />
+            </div>
+            <div class="event-info">
+              <p class="form-field-name">Select date for your event</p>
+              <input type="date" class="form-input" id="date" />
+              <p class="form-field-name">Select time for event</p>
+              <input type="time" class="form-input" id="time" />
+              <div class="event-desc">
+                <p class="form-field-name">Write a description of your event</p>
+                <input type="text" class="desc" id="desc" maxlength="250" />
+                <p class="length">250 characters remaining</p>
+                <script>
+                  // Counting characters in box and displaying it
+                  let box = document.getElementById("desc");
+                  let length = document.querySelector(".length");
+                  box.addEventListener("input", () => {
+                    length.innerHTML =
+                      250 - box.value.length + " characters remaining";
+                  });
+                  length.innerHTML = 250 - box.value.length;
+                </script>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="theater">
-        <ul class="seating">
-          <li>
-            <div class="seat"></div>
-            <small>Available</small>
-          </li>
-          <li>
-            <div class="selected"></div>
-            <small>Selected</small>
-          </li>
-          <li>
-            <div class="taken"></div>
-            <small>Taken</small>
-          </li>
-        </ul>
-      </div>
-    </div>
-    </div>
+    </article>
   </body>
 </html>

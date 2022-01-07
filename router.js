@@ -16,7 +16,7 @@ router.get("/register", function (req, res) {
 router.post("/register", userController.register);
 
 // Routing for login page
-router.get("/login", function(req, res) {
+router.get("/login", function (req, res) {
   res.render("login");
 });
 

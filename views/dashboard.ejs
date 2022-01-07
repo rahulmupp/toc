@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link href="/new-dashboard-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Dashboard</title>
   </head>
 
@@ -45,8 +46,50 @@
           <div class="second-col" />
             <p>Middle Name</p>
             <input type="text" placeholder="Type here" />
-            <p>Password</p>
-            <input type="text" placeholder="Type here" />
+            <div class="password-wrapper"> 
+              <p>Password</p> 
+              <input type="password" placeholder="Type here" id="pswrd_1" />
+              <span class="eye2" onclick="toggle()"> 
+                <i id="appear1" class="fa fa-eye"></i>
+                <i id="appear2" class="fa fa-eye-slash"></i> 
+              </span> 
+            </div>
+
+            <script>
+              function toggle() {
+                var a = document.getElementById("pswrd_1");
+                var b = document.getElementById("appear1");
+                var c = document.getElementById("appear2");
+
+                if(a.type === 'password') {
+                  a.type = "text";
+                  b.style.display = "block";
+                  c.style.display = "none";
+                }
+                else {
+                  a.type = "password";
+                  b.style.color = "#4739d7";
+                  b.style.display = "none";
+                  c.style.display = "block";
+                }
+              }
+            </script>
+
+            <!-- <script>
+              let state = false;
+              function togglePassword() {
+                if(state) {
+                  document.getElementsByClassName("password").setAttribute("type", "password");
+                  document.getElementsById("eye").style.color='#7a797e';
+                  state = false;
+                }
+                else {
+                  document.getElementsByClassName("password").setAttribute("type", "text");
+                  document.getElementsById("eye").style.color='#4739d7';
+                  state = true;
+                }
+              }
+            </script> -->
             <h3 class="section-heading">ㅤ</h3>
             <p>Whatsapp</p>
             <input type="text" placeholder="Type here" />
@@ -57,8 +100,36 @@
           <div class="third-col" />
             <p>Last Name</p>
             <input type="text" placeholder="Type here" />
-            <p>Re-Type Password</p>
-            <input type="text" placeholder="Type here" />
+            <div class="password-wrapper-2">
+              <div class="error-text">Error! Passwords do not match!</div>
+              <p>Confirm Password</p>
+              <input type="password" placeholder="Type here" id="pswrd_2" />
+              <span class="eye" onclick="myFunction()"> 
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i> 
+              </span> 
+            </div>
+
+            <script>
+              function myFunction() {
+                var x = document.getElementById("pswrd_2");
+                var y = document.getElementById("hide1");
+                var z = document.getElementById("hide2");
+
+                if(x.type === 'password') {
+                  x.type = "text";
+                  y.style.display = "block";
+                  z.style.display = "none";
+                }
+                else {
+                  x.type = "password";
+                  y.style.color = "#4739d7";
+                  y.style.display = "none";
+                  z.style.display = "block";
+                }
+              }
+            </script>
+
             <h3 class="section-heading">ㅤ</h3>
             <p>Email</p>
             <input type="text" placeholder="Type here" value="<%=email%>"/>
@@ -70,9 +141,10 @@
 
       <div class="card2">
         <img src="/img/profile.png" class="profile" />
-        <h2>First Last</h2>
-        <h3>Member since 2021</h3>
-        <h4>Events Hosted: 88</h4>
+        <h2 class="name">First Last</h2>
+        <h4 class="since">Member since 2021</h4>
+        <h4>88</h4>
+        <p>Events Hosted</p>
       </div>
     </article>
   </body>

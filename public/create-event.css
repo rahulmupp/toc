@@ -8,13 +8,13 @@
   margin: 0;
 }
 
-body {
-  background: rgb(241, 241, 241);
-  display: flex;
-}
-
 html {
   overflow: scroll;
+}
+
+body {
+  background: #f1f1f1;
+  display: flex;
 }
 
 /******************************/
@@ -42,7 +42,6 @@ html {
   color: #fff;
 }
 
-
 .nav-link:link,
 .nav-link:visited {
   display: block;
@@ -68,7 +67,7 @@ html {
 }
 
 .nav-dashboard-btn {
-  border-radius: 11px;
+  border-radius: 2rem;
   border-color: transparent;
   font-size: 16px;
   background-color: #fff;
@@ -83,103 +82,68 @@ html {
 .nav-dashboard-btn:hover {
   cursor: pointer;
   transition: all 0.4s;
-  background-color: #4739d7;
-  color: #fff;
+  background-color: rgba(173, 173, 173, 0.2);
+  color: rgb(241, 241, 241);
 }
 
-/* Card and Card's content */
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   background: #fff;
   border-radius: 1rem;
-  margin-left: 3rem;
-  margin-top: 4rem;
+  margin: 1rem 1rem;
+  margin-right: 25rem;
   padding: 2rem;
-  width: 1000px;
-  height: 630px;
+  padding-bottom: 0rem;
+  font-size: 14px;
+  width: 1065px;
+  height: 700px;
 }
 
-h2 {
-  position: absolute;
-  top: 5rem;
-  color: #000;
+.card-heading {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: #4739d7;
 }
 
-.desc-heading {
-  position: absolute;
-  top: 13rem;
-  color: #000;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #4739d7;
+.heading {
+  margin: 1rem 1rem;
 }
 
-.info {
-  color: #878c92;
-  font-size: 20px;
-  position: absolute;
-  left: 23.6rem;
-  line-height: 23px;
+.basic-info {
+  margin: 2.3rem 0rem;
+  margin-bottom: 2rem;
 }
 
-#eventDate {
-  position: absolute;
-  top: 7.6rem;
+input {
+  margin-bottom: 1.7rem;
+  margin-top: 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(241, 241, 241);
+  padding: 1rem;
+  padding-left: 0.2rem;
+  width: 200px;
 }
 
-#eventTime {
-  position: absolute;
-  top: 9rem;
+input:focus,
+input:active {
+  outline: none;
+  border-bottom: 2px solid #4739d7;
+  transition: 0.3s;
 }
 
-#eventAddress {
-  position: absolute;
-  top: 10.4rem;
+.container {
+  display: flex;
 }
 
-.desc-text {
-  color: #878c92;
-  font-size: 20px;
-  position: absolute;
-  top: 15rem;
-  left: 23.6rem;
-  max-width: 400px;
-  line-height: 23px;
+.basics {
+  flex: 1;
 }
 
-.venue {
-  position: absolute;
-  top:33rem;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #4739d7;
+.event-info {
+  flex: 3;
 }
 
-.location {
-  position: absolute;
-  top: 35rem;
-  left: 23.6rem;
-  max-width: 400px;
-}
-
-.contact-heading {
-  position: absolute;
-  top:25rem;
-  left: 22.5rem;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #4739d7;
-}
-
-.contact-info {
-  position: absolute;
-  top: 27rem;
-  left: 23.6rem;
-  color: #878c92;
-  font-size: 20px;
+.desc {
+  width: 400px;
+  height: 100px;
 }

@@ -5,7 +5,7 @@ const router = express.Router();
 // Import User Controller
 const userController = require("./controllers/userController");
 // Import Event Controller
-const eventController = require("./controllers/eventController")
+const eventController = require("./controllers/eventController");
 
 // Routing for landing page
 router.get("/", userController.home);
@@ -30,7 +30,15 @@ router.post("/logout", userController.logout);
 // Routing for dashboard
 router.get("/dashboard", userController.dashboard);
 
-router.get("/host", userController.isLoggedIn, eventController.createEvent);
+// Event stuff
+router.get(
+  "/host",
+  userController.isLoggedIn,
+  eventController.adminCreateEvent
+);
+router.post("/host", userController.isLoggedIn, eventController.create);
+
+router.get("/event/:id", eventController.viewEvent);
 
 // Export site routing
 module.exports = router;

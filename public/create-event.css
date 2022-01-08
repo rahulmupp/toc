@@ -89,13 +89,13 @@ body {
 .card {
   background: #fff;
   border-radius: 1rem;
-  margin: 1rem 1rem;
+  margin: 1rem 3rem;
   margin-right: 25rem;
   padding: 2rem;
   padding-bottom: 0rem;
-  font-size: 14px;
-  width: 1065px;
-  height: 700px;
+  font-size: 18px;
+  width: 880px;
+  height: 600px;
 }
 
 .card-heading {
@@ -105,7 +105,7 @@ body {
 }
 
 .heading {
-  margin: 1rem 1rem;
+  margin: 1rem 3rem;
 }
 
 .basic-info {
@@ -131,6 +131,11 @@ input:active {
   transition: 0.3s;
 }
 
+.section-heading {
+  margin: 2rem 0rem;
+  margin-bottom: 2rem;
+}
+
 .container {
   display: flex;
 }
@@ -140,7 +145,7 @@ input:active {
 }
 
 .event-info {
-  flex: 3;
+  flex: 2;
 }
 
 .desc {
@@ -155,5 +160,6 @@ input:active {
   background-color: #4739d7;
   color: #fff;
   padding: 5px 10px 7px 10px;
+  margin-top: 2rem;
   transition: all 0.2s;
 }

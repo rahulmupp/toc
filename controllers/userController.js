@@ -6,7 +6,7 @@ const User = require("../models/User");
 exports.register = function (req, res) {
   let user = new User(req.body);
   user.register();
-  req.session.user = { firstName: user.data.firstName, email: user.data.email, phone: user.data.phone, lastName: user.data.lastName, username: user.data.username, password: user.data.password, whatsApp: user.data.whatsApp, address: user.data.address, city: user.data.city, country: user.data.country};
+  req.session.user = {firstName: user.data.firstName, email: user.data.email, phone: user.data.phone, lastName: user.data.lastName, username: user.data.username, password: user.data.password, whatsApp: user.data.whatsApp, address: user.data.address, city: user.data.city, country: user.data.country};
   req.session.save(function () {
     res.redirect("/dashboard");
   });
@@ -18,7 +18,7 @@ exports.login = function (req, res) {
   user
     .login()
     .then(function (result) {
-      req.session.user = { name: user.data.name, email: user.data.email };
+      req.session.user = {email: user.data.email, _id: user.data._id };
       req.session.save(function () {
         res.redirect("/dashboard");
       });
@@ -62,15 +62,6 @@ exports.dashboard = function (req, res) {
 };
 
 // Routes for Event stuff
-
-exports.post = function (req, res) {
-  if (req.session.user) {
-    res.render("post");
-  } else {
-    res.redirect("/login");
-  }
-};
-
 exports.host = function (req, res) {
   if (req.session.user) {
     res.render("create-event");
